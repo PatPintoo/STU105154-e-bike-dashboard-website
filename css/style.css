@@ -1,0 +1,27 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #007b83;
+  color: white;
+  padding: 1em;
+}
+.filters {
+  margin-top: 1em;
+}
+main {
+  padding: 1em;
+}
+footer {
+  background: #eee;
+  padding: 1em;
+  text-align: center;
+}
+canvas {
+  background: white;
+  border: 1px solid #ccc;
+}
