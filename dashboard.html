@@ -1,50 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <title>E-Bike Data Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <header>
     <h1>E-Bike Data Dashboard</h1>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="index.html">Home</a> |
+      <a href="dashboard.html">Dashboard</a> |
       <a href="about.html">About</a>
     </nav>
+    <div class="filters">
+      <label>City:
+        <select><option>London</option><option>New York</option></select>
+      </label>
+      <label>User Type:
+        <select><option>Subscriber</option><option>Casual</option></select>
+      </label>
+      <label>Time Period:
+        <select><option>Daily</option><option>Hourly</option></select>
+      </label>
+    </div>
   </header>
 
-  <section class="filters">
-    <label for="city">City:</label>
-    <select id="city">
-      <option>London</option>
-      <option>New York</option>
-    </select>
-    <label for="userType">User Type:</label>
-    <select id="userType">
-      <option>Subscriber</option>
-      <option>Casual</option>
-    </select>
-    <label for="timePeriod">Time Period:</label>
-    <select id="timePeriod">
-      <option>Hourly</option>
-      <option>Daily</option>
-    </select>
-  </section>
+  <main class="grid">
+    <section>
+      <h2>Trip Count by Day of Week</h2>
+      <img src="images/trip_count_by_day.png" alt="Trip by Day">
+      <p>This bar chart shows how trip frequency varies across weekdays. Monday had the highest number of trips, with usage dipping midweek and recovering slightly over the weekend.</p>
+    </section>
 
-  <section class="charts">
-    <canvas id="hourlyChart"></canvas>
-    <canvas id="weekdayChart"></canvas>
-    <canvas id="userTypeChart"></canvas>
-    <canvas id="tripDistanceChart"></canvas>
-  </section>
+    <section>
+      <h2>Trip Count by Hour of Day</h2>
+      <img src="images/trip_count_by_hour.png" alt="Trip by Hour">
+      <p>Displays hourly trends to highlight peak usage, typically around commute times (7-9 AM and 5-7 PM).</p>
+    </section>
+
+    <section>
+      <h2>User Type Ratio</h2>
+      <img src="images/user_type_ratio_pie.png" alt="User Type Ratio">
+      <p>A pie chart showing the proportion of subscribers vs casual users. Most users are subscribers, indicating regular commuting usage.</p>
+    </section>
+
+    <section>
+      <h2>Average Trip Distance</h2>
+      <img src="images/avg_trip_distance.png" alt="Average Distance">
+      <p>Line graph representing average trip distances. Wednesday has the highest, with fluctuations suggesting different commuting behavior across the week.</p>
+    </section>
+  </main>
 
   <footer>
-    <p>Accessibility | Feedback | Download</p>
+    <p>Accessibility | Feedback | Download Data</p>
   </footer>
 
-  <script src="js/dashboard.js"></script>
 </body>
 </html>
