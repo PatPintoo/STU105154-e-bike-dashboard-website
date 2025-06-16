@@ -1,91 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About Project | E-Bike Dashboard</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background-color: #f4f4f4;
-    }
-
-    header {
-      background-color: #223A5E;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #e2e2e2;
-      text-align: center;
-      padding: 10px;
-    }
-
-    nav a {
-      margin: 5px 10px;
-      text-decoration: none;
-      color: #223A5E;
-      font-weight: bold;
-    }
-
-    .container {
-      max-width: 960px;
-      margin: auto;
-      background: white;
-      padding: 30px;
-    }
-
-    h2 {
-      color: #223A5E;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 13px;
-      margin: 20px 0;
-      color: #777;
-    }
-  </style>
+  <meta charset="UTF-8"/>
+  <title>About | E-Bike Dashboard</title>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
   <header>
-    <h1>About the Project</h1>
+    <h1>About This Dashboard</h1>
+    <p class="sub">Methodology & Research Context</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="about.html">About</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="dashboard.html">Dashboard</a>
-    <a href="about.html">About</a>
-  </nav>
+  <main class="container">
+    <section>
+      <h2>Methodology</h2>
+      <p>This dashboard is part of a final year dissertation project exploring urban micromobility usage. It leverages open data from CitiBike and EEA to highlight sustainable trends.</p>
+    </section>
 
-  <div class="container">
-    <h2>Project Overview</h2>
-    <p>
-      This academic project analyzes e-bike usage data collected from open NYC CitiBike systems.
-      The primary goal is to understand urban micromobility patterns through hourly and daily breakdowns, user type segmentation, and trip length estimation.
-    </p>
-
-    <h2>Tools & Technologies</h2>
-    <p>
-      The dashboard uses HTML5, CSS3, and JavaScript along with Chart.js for data visualizations.
-      JSON is used to load data dynamically. The project is deployed using GitHub Pages.
-    </p>
-
-    <h2>Academic Context</h2>
-    <p>
-      Developed as part of a dissertation project at Arden University for STU105154 (2025), this project highlights applied data visualization and user-centered dashboard design.
-    </p>
-  </div>
-
-  <footer>
-    &copy; 2025 | STU105154 | Arden University
-  </footer>
+    <section>
+      <h2>Academic Alignment</h2>
+      <ul>
+        <li>Aligned with SDG 11: Sustainable Cities</li>
+        <li>Applies data visualization for social insight</li>
+        <li>Demonstrates digital skills with GitHub + HTML/CSS</li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>
