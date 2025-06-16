@@ -1,103 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Welcome | E-Bike Dashboard</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background-color: #f4f4f4;
-    }
-
-    header {
-      background-color: #223A5E;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-    }
-
-    nav {
-      background-color: #e2e2e2;
-      text-align: center;
-      padding: 10px;
-    }
-
-    nav a {
-      margin: 5px 10px;
-      text-decoration: none;
-      color: #223A5E;
-      font-weight: bold;
-    }
-
-    .container {
-      max-width: 960px;
-      margin: auto;
-      background: white;
-      padding: 30px;
-    }
-
-    h2 {
-      color: #223A5E;
-    }
-
-    p {
-      font-size: 16px;
-    }
-
-    .buttons {
-      margin-top: 30px;
-    }
-
-    .buttons a {
-      padding: 10px 20px;
-      background-color: #223A5E;
-      color: white;
-      text-decoration: none;
-      margin-right: 10px;
-      border-radius: 5px;
-    }
-
-    .buttons a:hover {
-      background-color: #1a2f4b;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 13px;
-      margin: 20px 0;
-      color: #777;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-Bike Usage Dashboard (NYC)</title>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
   <header>
-    <h1>Welcome to the E-Bike Dashboard</h1>
+    <h1>E-Bike Usage Dashboard (NYC)</h1>
+    <p class="sub">By STU105154 | Arden University | 2025</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="about.html">About</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="dashboard.html">Dashboard</a>
-    <a href="about.html">About</a>
-  </nav>
+  <main class="container">
+    <section>
+      <h2>About the Project</h2>
+      <p>This site visualizes real-world e-bike usage patterns in New York City using open CitiBike data. Key features include:</p>
+      <ul>
+        <li>Trip volume by time of day and user type</li>
+        <li>User Type Ratio</li>
+        <li>Average Trip Distance</li>
+        <li>Methodological summary of calculations</li>
+      </ul>
+    </section>
 
-  <div class="container">
-    <h2>Introduction</h2>
-    <p>This site provides interactive visualizations of electric bike usage patterns across major urban centers. The dashboard lets you explore trip data by hour, day, and user type, powered by JSON-based data visualizations.</p>
+    <section>
+      <h2>Tools Used</h2>
+      <ul>
+        <li>HTML/CSS for structure and layout</li>
+        <li>Static images created in Excel/PowerPoint</li>
+        <li>Hosted via GitHub Pages</li>
+      </ul>
+    </section>
 
-    <div class="buttons">
-      <a href="dashboard.html">Go to Dashboard</a>
-      <a href="about.html">About Project</a>
-    </div>
-  </div>
+    <section>
+      <h2>Live Website</h2>
+      <p>Visit: <a href="https://stu105154.github.io/e-bike-dashboard/" target="_blank"><strong>https://stu105154.github.io/e-bike-dashboard/</strong></a></p>
+    </section>
 
-  <footer>
-    &copy; 2025 | STU105154 | Arden University
-  </footer>
+    <section>
+      <h2>Licence</h2>
+      <p>This repository contains academic artefact materials only. All data used is publicly available via CitiBike and EEA under open data terms.</p>
+    </section>
+  </main>
 </body>
 </html>
-
