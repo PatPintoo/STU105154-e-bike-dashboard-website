@@ -1,18 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>E-Bike Dashboard</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <title>Welcome | E-Bike Dashboard</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #223A5E;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav {
+      background-color: #e2e2e2;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      margin: 5px 10px;
+      text-decoration: none;
+      color: #223A5E;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+    }
+
+    h2 {
+      color: #223A5E;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .buttons a {
+      padding: 10px 20px;
+      background-color: #223A5E;
+      color: white;
+      text-decoration: none;
+      margin-right: 10px;
+      border-radius: 5px;
+    }
+
+    .buttons a:hover {
+      background-color: #1a2f4b;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 13px;
+      margin: 20px 0;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to E-Bike Dashboard</h1>
-    <p>This site presents an interactive dashboard for analyzing e-bike usage data.</p>
-    <nav>
-      <a href="dashboard.html">Go to Dashboard</a> |
-      <a href="about.html">About Project</a>
-    </nav>
+    <h1>Welcome to the E-Bike Dashboard</h1>
   </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <div class="container">
+    <h2>Introduction</h2>
+    <p>This site provides interactive visualizations of electric bike usage patterns across major urban centers. The dashboard lets you explore trip data by hour, day, and user type, powered by JSON-based data visualizations.</p>
+
+    <div class="buttons">
+      <a href="dashboard.html">Go to Dashboard</a>
+      <a href="about.html">About Project</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 | STU105154 | Arden University
+  </footer>
 </body>
 </html>
+
