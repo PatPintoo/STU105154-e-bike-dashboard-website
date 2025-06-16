@@ -2,118 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>E-Bike Dashboard</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f9f9f9;
-    }
-
-    nav {
-      background-color: #007a87;
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .filters {
-      padding: 10px;
-      background-color: #eee;
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    section {
-      padding: 20px;
-    }
-
-    h2 {
-      margin-top: 40px;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
-    }
-
-    footer {
-      background: #eee;
-      padding: 15px;
-      text-align: center;
-      margin-top: 50px;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <nav>
-    <div>
-      <a href="index.html">Home</a>
-      <a href="dashboard.html">Dashboard</a>
+  <header>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="dashboard.html">Dashboard</a> |
       <a href="about.html">About</a>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <div class="filters">
-    <label>City:
-      <select>
-        <option>London</option>
-        <option>New York</option>
-      </select>
-    </label>
-    <label>User Type:
-      <select>
-        <option>Subscriber</option>
-        <option>Casual</option>
-      </select>
-    </label>
-    <label>Time Period:
-      <select>
-        <option>Hourly</option>
-        <option>Daily</option>
-      </select>
-    </label>
-  </div>
+  <section class="filters">
+    <label for="city">City:</label>
+    <select id="city">
+      <option value="London">London</option>
+      <!-- Add more cities if needed -->
+    </select>
 
-  <section>
-    <h2>Trip Count by Day of Week</h2>
-    <img src="Days of week chart.png" alt="Trip by Day">
-    <p>This bar chart shows how trip frequency varies across weekdays. Monday had the highest number of trips, with usage dipping midweek and recovering slightly over the weekend.</p>
+    <label for="userType">User Type:</label>
+    <select id="userType">
+      <option value="Subscriber">Subscriber</option>
+      <option value="Casual">Casual</option>
+    </select>
 
-    <h2>Trip Count by Hour of Day</h2>
-    <img src="Hourly Trips chart.png" alt="Trip by Hour">
-    <p>Displays hourly trends to highlight peak usage, typically around commute times (7-9 AM and 5-7 PM).</p>
-
-    <h2>User Type Ratio</h2>
-    <img src="PieChart.png" alt="User Type Ratio">
-    <p>A pie chart showing the proportion of subscribers vs casual users. Most users are subscribers, indicating regular commuting usage.</p>
-
-    <h2>Average Trip Distance</h2>
-    <img src="screenshot_distance_chart.png" alt="Average Distance">
-    <p>Line graph representing average trip distances. Wednesday has the highest, with fluctuations suggesting different commuting behavior across the week.</p>
-
-    <h2>Pie Chart (User Type Ratio)</h2>
-    <img src="screenshot_pie_chart.png" alt="User Ratio Alt">
-    <p>Alternate visualization of user types to reinforce interpretation and ensure accessibility with color contrast.</p>
+    <label for="timePeriod">Time Period:</label>
+    <select id="timePeriod">
+      <option value="Hourly">Hourly</option>
+      <option value="Daily">Daily</option>
+    </select>
   </section>
 
-  <footer>
-    Accessibility | Feedback | Download Data
-  </footer>
+  <main>
+    <section>
+      <h2>Trip Count by Day of Week</h2>
+      <img src="images/Days of week chart.png" alt="Trip by Day" width="500">
+      <p>This bar chart shows how trip frequency varies across weekdays. Monday had the highest number of trips, with usage dipping midweek and recovering slightly over the weekend.</p>
+    </section>
 
+    <section>
+      <h2>Trip Count by Hour of Day</h2>
+      <img src="images/Hourly Trips chart.png" alt="Trip by Hour" width="500">
+      <p>Displays hourly trends to highlight peak usage, typically around commute times (7–9 AM and 5–7 PM).</p>
+    </section>
+
+    <section>
+      <h2>User Type Ratio</h2>
+      <img src="images/PieChart.png" alt="User Type Ratio" width="400">
+      <p>A pie chart showing the proportion of subscribers vs casual users. Most users are subscribers, indicating regular commuting usage.</p>
+    </section>
+
+    <section>
+      <h2>Average Trip Distance</h2>
+      <img src="images/screenshot_distance_chart.png" alt="Average Distance" width="500">
+      <p>Line graph representing average trip distances. Wednesday has the highest, with fluctuations suggesting different commuting behavior across the week.</p>
+    </section>
+
+    <section>
+      <h2>Subscriber vs Casual (Alternate Pie Chart)</h2>
+      <img src="images/screenshot_pie_chart.png" alt="Pie Breakdown" width="400">
+      <p>This alternative visualization supports the main user ratio data and confirms consistency in user segmentation.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Accessibility | Feedback | Download Data</p>
+  </footer>
 </body>
 </html>
