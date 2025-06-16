@@ -2,35 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>E-Bike Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
   <link rel="stylesheet" href="css/style.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <header>
     <h1>E-Bike Data Dashboard</h1>
-    <div class="filters">
-      City: 
-      <select id="citySelect">
-        <option value="London">London</option>
-        <option value="NYC">New York</option>
-      </select>
-      User Type: 
-      <select id="userTypeSelect">
-        <option value="Subscriber">Subscriber</option>
-        <option value="Casual">Casual</option>
-      </select>
-      Time Period: 
-      <select id="timePeriodSelect">
-        <option value="Daily">Daily</option>
-        <option value="Hourly">Hourly</option>
-      </select>
-    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </nav>
   </header>
 
-  <main>
-    <canvas id="tripChart"></canvas>
-  </main>
+  <section class="filters">
+    <label for="city">City:</label>
+    <select id="city">
+      <option>London</option>
+      <option>New York</option>
+    </select>
+    <label for="userType">User Type:</label>
+    <select id="userType">
+      <option>Subscriber</option>
+      <option>Casual</option>
+    </select>
+    <label for="timePeriod">Time Period:</label>
+    <select id="timePeriod">
+      <option>Hourly</option>
+      <option>Daily</option>
+    </select>
+  </section>
+
+  <section class="charts">
+    <canvas id="hourlyChart"></canvas>
+    <canvas id="weekdayChart"></canvas>
+    <canvas id="userTypeChart"></canvas>
+    <canvas id="tripDistanceChart"></canvas>
+  </section>
 
   <footer>
     <p>Accessibility | Feedback | Download</p>
