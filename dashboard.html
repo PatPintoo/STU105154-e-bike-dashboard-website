@@ -1,128 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>E-Bike Usage Dashboard (NYC)</title>
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background-color: #f4f4f4;
-    }
-
-    header {
-      background-color: #223A5E;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-    }
-
-    header p {
-      font-size: 14px;
-      margin-top: 4px;
-    }
-
-    nav {
-      background-color: #e2e2e2;
-      text-align: center;
-      padding: 10px;
-    }
-
-    nav button {
-      margin: 5px;
-      padding: 8px 14px;
-      font-size: 14px;
-      background-color: #d4d4d4;
-      border: 1px solid #bbb;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-
-    nav button:hover {
-      background-color: #bbb;
-    }
-
-    .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 20px;
-      background: white;
-    }
-
-    h2 {
-      color: #223A5E;
-    }
-
-    img.chart {
-      width: 100%;
-      max-width: 450px;
-      display: block;
-      margin: 10px 0;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 13px;
-      margin: 20px 0;
-      color: #777;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <title>Dashboard | E-Bike Data</title>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
   <header>
     <h1>E-Bike Usage Dashboard (NYC)</h1>
-    <p>By STU105154 | Arden University | 2025</p>
+    <p class="sub">Visual Analytics View</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="about.html">About</a>
+    </nav>
   </header>
 
-  <nav>
-    <button>Overview</button>
-    <button>Usage Trends</button>
-    <button>User Type Ratio</button>
-    <button>Average Trip Distance</button>
-    <button>Methodology</button>
-    <button>Usage Dashboard</button>
-  </nav>
+  <div class="filters">
+    <label for="city">City:</label>
+    <select id="city">
+      <option>London</option>
+      <option>New York</option>
+    </select>
 
-  <div class="container">
+    <label for="user">User Type:</label>
+    <select id="user">
+      <option>Subscriber</option>
+      <option>Casual</option>
+    </select>
+
+    <label for="time">Time Period:</label>
+    <select id="time">
+      <option>Daily</option>
+      <option>Hourly</option>
+    </select>
+  </div>
+
+  <main class="container">
     <section>
-      <h2>Dashboard Overview</h2>
-      <p>This dashboard summarises electric bike usage trends in NYC using publicly available CitiBike data. It estimates trip volume, duration, and emissions saved by replacing car journeys.</p>
-
-      <img src="images/Days of week chart.png" class="chart" alt="Trip Count by Day of Week">
+      <h2>Trip Count by Day of Week</h2>
+      <img src="images/Days of week chart.png" alt="Trip by Day" />
+      <p>This bar chart shows how trip frequency varies across weekdays. Monday had the highest number of trips, with usage dipping midweek and recovering slightly over the weekend.</p>
     </section>
 
     <section>
-      <h2>Hourly Trip Frequency</h2>
-      <p>Visualizing hourly demand highlights peak commuter times between 7–9 AM and 5–7 PM.</p>
-      <img src="images/Hourly Trips chart.png" class="chart" alt="Trip Count by Hour">
+      <h2>Trip Count by Hour of Day</h2>
+      <img src="images/Hourly Trips chart.png" alt="Trip by Hour" />
+      <p>Displays hourly trends to highlight peak usage, typically around commute times (7-9 AM and 5-7 PM).</p>
     </section>
 
     <section>
       <h2>User Type Ratio</h2>
-      <p>This pie chart compares Subscriber vs Casual usage. 75% of trips are made by Subscribers.</p>
-      <img src="images/PieChart.png" class="chart" alt="User Type Pie Chart">
+      <img src="images/PieChart.png" alt="User Type Ratio" />
+      <p>A pie chart showing the proportion of subscribers vs casual users. Most users are subscribers, indicating regular commuting usage.</p>
     </section>
 
     <section>
       <h2>Average Trip Distance</h2>
-      <p>The distance chart below reflects travel behaviour across weekdays. Wednesday shows the longest average trip.</p>
-      <img src="images/screenshot_distance_chart.png" class="chart" alt="Average Trip Distance Chart">
+      <img src="images/screenshot_distance_chart.png" alt="Average Distance" />
+      <p>Line graph representing average trip distances. Wednesday has the highest, with fluctuations suggesting different commuting behavior across the week.</p>
     </section>
-
-    <section>
-      <h2>User Breakdown (Alternative)</h2>
-      <p>This secondary pie chart supports user segmentation accuracy.</p>
-      <img src="images/screenshot_pie_chart.png" class="chart" alt="Alternative Pie Chart">
-    </section>
-  </div>
+  </main>
 
   <footer>
-    Accessibility | Feedback | Download Data
+    <p>Accessibility | Feedback | <a href="#">Download Data</a></p>
   </footer>
 </body>
 </html>
